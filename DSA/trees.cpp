@@ -137,82 +137,114 @@
 
 
 /// breath first search sollution
-#include <iostream>
-#include <queue>       // For std::queue
-#include <vector>      // For std::vector
+// #include <iostream>
+// #include <queue>       // For std::queue
+// #include <vector>      // For std::vector
 
-// Define the Node class
-class Node {
-public:
-    char val;
-    Node* left;
-    Node* right;
+// // Define the Node class
 
-    // Constructor
-    Node(char val) {
-        this->val = val;
-        this->left = nullptr;
-        this->right = nullptr;
-    }
-};
+// class Node {
+//     public 
+//     char val;
+//     Node*left;
+//     Node*right;
+//     Node(char val){
+//         this->val = val;
+//         this->left = nullptr;
+//         this->right = nullptr;
+//     }
+// }
+// class Node {
+// public:
+//     char val;
+//     Node* left;
+//     Node* right;
 
-// Breadth-First Search (BFS) function
-std::vector<char> BreadthFirstValues(Node* root) {
-    std::vector<char> values; // To store the result
-    if (root == nullptr) {
-        return values; // Return empty vector if the tree is empty
-    }
+//     // Constructor
+//     Node(char val) {
+//         this->val = val;
+//         this->left = nullptr;
+//         this->right = nullptr;
+//     }
+// };
 
-    std::queue<Node*> queue; // Use a queue for BFS
-    queue.push(root);        // Start with the root node
+// // Breadth-First Search (BFS) function
+// std::vector<char> BreadthFirstValues(Node* root) {
+//     std::vector<char> values; // To store the result
+//     if (root == nullptr) {
+//         return values; // Return empty vector if the tree is empty
+//     } 
 
-    while (!queue.empty()) {
-        Node* current = queue.front(); // Get the front node
-        queue.pop();                   // Remove it from the queue
-        values.push_back(current->val); // Add its value to the result
+//     std::queue<Node*> queue; // Use a queue for BFS
+//     queue.push(root);        // Start with the root node
 
-        // Add the left child to the queue if it exists
-        if (current->left != nullptr) {
-            queue.push(current->left);
-        }
+//     while (!queue.empty()) {
+//         Node* current = queue.front(); // Get the front node
+//         queue.pop();                   // Remove it from the queue
+//         values.push_back(current->val); // Add its value to the result
 
-        // Add the right child to the queue if it exists
-        if (current->right != nullptr) {
-            queue.push(current->right);
-        }
-    }
+//         // Add the left child to the queue if it exists
+//         if (current->left != nullptr) {
+//             queue.push(current->left);
+//         }
 
-    return values; // Return the result
-}
+//         // Add the right child to the queue if it exists
+//         if (current->right != nullptr) {
+//             queue.push(current->right);
+//         }
+//     }
+//     vector<char>bfs(node *root){
+//         vector<char> values;
+//         if(root == NULL){
+//             return values;
+//         }
+//         queue<node*> q;
+//         q.push(root);
+//         while(!q == empty){
+//             node*current = q.front();
+//             q.pop();
+//             values.push_back(current->val);
+//             if(current->left != NULL){
+//                 q.push(current->left);
+//             }
+//             if(current->right != NULL){
+//                 q.push(current->right);
+//             }
+//         }
+//     };
 
-int main() {
-    // Create nodes
-    Node* a = new Node('a');
-    Node* b = new Node('b');
-    Node* c = new Node('c');
-    Node* d = new Node('d');
-    Node* e = new Node('e');
-    Node* f = new Node('f');
 
-    // Build the tree structure
-    a->left = b;
-    a->right = c;
-    b->left = d;
-    b->right = e;
-    c->right = f;
+//     return values; // Return the result
+// }
 
-    // Perform BFS and get the result
-    std::vector<char> bfsResult = BreadthFirstValues(a);
+// int main() {
+//     // Create nodes
+//     Node* a = new Node('a');
+//     Node* b = new Node('b');
+//     Node* c = new Node('c');
+//     Node* d = new Node('d');
+//     Node* e = new Node('e');
+//     Node* f = new Node('f');
 
-    // Print the result
-    std::cout << "BFS Result: ";
-    for (char val : bfsResult) {
-        std::cout << val << " ";
-    }
-    std::cout << std::endl;
+//     // Build the tree structure
+//     a->left = b;
+//     a->right = c;
+//     b->left = d;
+//     b->right = e;
+//     c->right = f;
 
-    return 0;
-}
+//     // Perform BFS and get the result
+//     std::vector<char> bfsResult = BreadthFirstValues(a);
+
+//     // Print the result
+//     std::cout << "BFS Result: ";
+//     for (char val : bfsResult) {
+//         std::cout << val << " ";
+//     }
+//     std::cout << std::endl;
+
+//     return 0;
+// }
 // // binary tree: 
 // // A tree in which each node can have at most two children is called a binary tree.
 // // A binary tree has the benefits of both an ordered array and a linked list as search is as quick as in a sorted array and insertion or deletion operation are as fast as in linked list.
@@ -237,3 +269,37 @@ int main() {
 
 // Breadth first search : 
 // In breadth-first search, the nodes are explored breadth-wise. In other words, we explore all the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. Breadth-first search is a queue-based algorithm. It involves searching all the nodes at a given depth before moving on to the nodes at the next depth level.
+
+#include <iostream>
+#include <queue>       // For std::queue
+#include <vector>      // For std::vector
+
+class Node {
+    public : 
+    char val;
+    Node*left ;
+    Node*right;
+    Node(char val){ // constructor 
+        this->val = val;
+        this->left = NULL;
+        this->right - N ULL;
+    }
+}
+
+ 
+    int main(){
+        Node * a = new Node('a');
+        Node * b = new Node('b');
+        Node * c = new Node('c');
+        Node * d = new Node('d');
+        Node * e = new Node('e');
+        Node * f = new Node('f');
+
+        a->left = b;
+        a->right = c;
+        b->left = d;
+        b->right = e;
+        c->right = f;
+
+
+    }
