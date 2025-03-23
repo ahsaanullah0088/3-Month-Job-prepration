@@ -143,3 +143,130 @@
 // }
 
 
+// Binary tree traversal 
+// Going through a Tree by visiting every node, one node at a time, is called traversal.
+
+
+
+// Binary traversal Types :
+
+// Breadth First Search (BFS) is when the nodes on the same level are visited before going to the next level in the tree. This means that the tree is explored in a more sideways direction.
+
+// Depth First Search (DFS) is when the traversal moves down the tree all the way to the leaf nodes, exploring the tree branch by branch in a downwards direction.
+
+// There are three different types of DFS traversals:
+
+// pre-order
+// in-order
+// post-order
+// These three Depth First Search traversals are described in detail on the next pages.
+
+
+// Pre-order Traversal of Binary Trees
+// Pre-order Traversal is a type of Depth First Search, where each node is visited in a certain order.
+
+
+
+// #include<iostream>
+// using namespace std;
+// class TreeNode{
+//     public:
+//     char data;
+//     TreeNode*left;
+//     TreeNode*right;
+//     TreeNode(char data){
+//         this->data = data;
+//         left = NULL;
+//         right = NULL;
+//     }
+// };
+// // Function for preorder traversal (iterative)
+// vector<char> preorderTraversal(TreeNode* root) {
+//     vector<char> result;
+//     if (root == nullptr) {
+//         return result;
+//     }
+
+//     stack<TreeNode*> stack;
+//     stack.push(root);
+
+//     while (!stack.empty()) {
+//         TreeNode* current = stack.top();
+//         stack.pop();
+//         result.push_back(current->data);
+
+//         // Push right child first so that left child is processed next
+//         if (current->right != nullptr) {
+//             stack.push(current->right);
+//         }
+//         if (current->left != nullptr) {
+//             stack.push(current->left);
+//         }
+//     }
+//     return result;
+// }
+// int main(){
+//     TreeNode* root = new TreeNode('A');
+//     root->left = new TreeNode('B');
+//     root->right = new TreeNode('C');
+//     root->left->left = new TreeNode('D');
+//     root->left->right = new TreeNode('E');
+//     root->right->left = new TreeNode('F');
+//     root->right->right = new TreeNode('G');
+
+//     vector<char> traversalResult = preorderTraversal(root);
+
+
+//     // Print the preorder traversal sequence
+//     cout << "Preorder Traversal: ";
+//     for (char ch : traversalResult) {
+//         cout << ch << " ";
+//     }
+//     cout << endl;
+// }
+
+
+// #include <iostream>
+
+// // Definition for a binary tree node (assuming a Node structure)
+// struct Node {
+//     char data;
+//     Node* left;
+//     Node* right;
+//     Node(char val) : data(val), left(nullptr), right(nullptr) {}
+// };
+
+// void preorder(Node* ptr) {
+//     if (ptr != nullptr) {
+//         std::cout << ptr->data << " "; // Print the data of the current node
+//         preorder(ptr->left);
+//         preorder(ptr->right);
+//     }
+// }
+
+// int main() {
+//     // Create a sample binary tree
+//     Node* root = new Node('R');
+//     root->left = new Node('A');
+//     root->right = new Node('B');
+//     root->left->left = new Node('C');
+//     root->left->right = new Node('D');
+//     root->right->left = new Node('E');
+//     root->right->right = new Node('F');
+
+//     std::cout << "Preorder Traversal: ";
+//     preorder(root);
+//     std::cout << std::endl;
+
+//     // Clean up memory (important to avoid memory leaks)
+//     // In a real application, you'd likely have a more robust way to manage memory.
+//     delete root->left->left;
+//     delete root->left->right;
+//     delete root->right->left;
+//     delete root->right->right;
+//     delete root->left;
+//     delete root->right;
+//     delete root;
+
+//     return 0;
+// }
