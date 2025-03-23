@@ -1,6 +1,5 @@
 import React from 'react'
 const Card = (props) => {
-    console.log(props);
   return (
     <div className="w-60 flex flex-col rounded-xl bg-black min-h-[19rem] ">
     <div>
