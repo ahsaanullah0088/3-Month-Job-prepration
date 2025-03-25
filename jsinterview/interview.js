@@ -131,3 +131,12 @@ console.log(b);
 // question 6
 // take two strings 
 // merge two stirng alternativerly 
+
+
+// question 6
+// take two strings 
+// merge two stirng alternativerly 
+
+
+const a =0; 
+const b =0; 
