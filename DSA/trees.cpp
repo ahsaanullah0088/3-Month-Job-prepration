@@ -270,36 +270,67 @@
 // Breadth first search : 
 // In breadth-first search, the nodes are explored breadth-wise. In other words, we explore all the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. Breadth-first search is a queue-based algorithm. It involves searching all the nodes at a given depth before moving on to the nodes at the next depth level.
 
-#include <iostream>
-#include <queue>       // For std::queue
-#include <vector>      // For std::vector
+// #include <iostream>
+// #include <queue>       // For std::queue
+// #include <vector>      // For std::vector
 
-class Node {
-    public : 
-    char val;
-    Node*left ;
-    Node*right;
-    Node(char val){ // constructor 
-        this->val = val;
-        this->left = NULL;
-        this->right - N ULL;
-    }
-}
+// class Node {
+//     public : 
+//     char val;
+//     Node*left ;
+//     Node*right;
+//     Node(char val){ // constructor 
+//         this->val = val;
+//         this->left = NULL;
+//         this->right - N ULL;
+//     }
+// }
 
  
-    int main(){
-        Node * a = new Node('a');
-        Node * b = new Node('b');
-        Node * c = new Node('c');
-        Node * d = new Node('d');
-        Node * e = new Node('e');
-        Node * f = new Node('f');
+//     int main(){
+//         Node * a = new Node('a');
+//         Node * b = new Node('b');
+//         Node * c = new Node('c');
+//         Node * d = new Node('d');
+//         Node * e = new Node('e');
+//         Node * f = new Node('f');
 
-        a->left = b;
-        a->right = c;
-        b->left = d;
-        b->right = e;
-        c->right = f;
+//         a->left = b;
+//         a->right = c;
+//         b->left = d;
+//         b->right = e;
+//         c->right = f;
 
 
+//     }
+
+
+// trees implementation step by step 
+
+#include<iostream>
+#include<queue>
+using namespace std;
+
+class Node{
+    public: 
+    int data ; 
+    Node* left , *right;
+    Node(int value){
+        data = value;
+        left = right = NULL;
     }
+};
+int main(){
+    int x; 
+    cout<<"Enter the root element";
+    int first , second;
+    queue <Node*>q;
+    Node*root = new Node(x);
+    q.push(root);
+    while(!q.empty()){
+        Node*temp = q.front();
+        q.pop();
+        cin>>first;
+        
+    }
+}
