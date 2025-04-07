@@ -334,3 +334,38 @@ int main(){
         
     }
 }
+
+/ #include <iostream>
+// #include <queue>       // For std::queue
+// #include <vector>      // For std::vector
+
+// class Node {
+//     public : 
+//     char val;
+//     Node*left ;
+//     Node*right;
+//     Node(char val){ // constructor 
+//         this->val = val;
+//         this->left = NULL;
+//         this->right - N ULL;
+//     }
+// }
+
+ 
+//     int main(){
+//         Node * a = new Node('a');
+//         Node * b = new Node('b');
+//         Node * c = new Node('c');
+//         Node * d = new Node('d');
+//         Node * e = new Node('e');
+//         Node * f = new Node('f');
+
+//         a->left = b;
+//         a->right = c;
+//         b->left = d;
+//         b->right = e;
+//         c->right = f;
+
+
+//     }
+
